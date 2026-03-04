@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwoWay } from './two-way';
+import { TwoWayBinding } from './two-way';
 
 describe('TwoWay', () => {
-  let component: TwoWay;
-  let fixture: ComponentFixture<TwoWay>;
+  let component: TwoWayBinding;
+  let fixture: ComponentFixture<TwoWayBinding>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TwoWay],
+      imports: [TwoWayBinding],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TwoWay);
+    fixture = TestBed.createComponent(TwoWayBinding);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
