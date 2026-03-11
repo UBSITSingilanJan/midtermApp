@@ -1,0 +1,29 @@
+<h2>Product List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (p of products; track p.id){
+    <tr>
+      <td>{{ p.id }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.status }}</td>
+      <td>
+        <a [routerLink] = "[ '/prod-list', p.id, 'details']" class="btn-view" (onClick)="getProduct(p)">View</a>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+<div class = "container">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,28 @@
+<div class='card-body'>
+
+    <div>
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="product.name"
+        required
+      />
+    </div>
+  
+    <div>
+      <label>Category</label>
+      <input
+        type="category"
+        name="category"
+        [(ngModel)]="product.category"
+        required
+      />
+    </div>
+
+  
+    <button type="submit" [disabled]="userForm.invalid">
+      Submit
+    </button>
+  
+</div>
