@@ -31,6 +31,4 @@ export class ProductsList implements OnInit {
     this.selectedId = p.id;
     this.router.navigate([ '/prod-list', p.id, 'details']);
   }
-
-
 }

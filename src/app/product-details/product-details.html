@@ -1,28 +1,40 @@
-<div class='card-body'>
+<div class="product-details" *ngIf="product">
+  <h2>Edit Product</h2>
 
-    <div>
-      <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        [(ngModel)]="product.name"
-        required
-      />
-    </div>
-  
-    <div>
+  <div class="form-group">
+    <label>Name</label>
+    <input [(ngModel)]="product.name">
+  </div>
+
+  <div class="form-grid">
+    <div class="form-group">
       <label>Category</label>
-      <input
-        type="category"
-        name="category"
-        [(ngModel)]="product.category"
-        required
-      />
+      <input [(ngModel)]="product.category">
     </div>
+    <div class="form-group">
+      <label>Brand</label>
+      <input [(ngModel)]="product.brand">
+    </div>
+  </div>
 
-  
-    <button type="submit" [disabled]="userForm.invalid">
-      Submit
-    </button>
-  
+  <div class="form-grid">
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" [(ngModel)]="product.price">
+    </div>
+    <div class="form-group">
+      <label>Stock</label>
+      <input type="number" [(ngModel)]="product.stock">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Description</label>
+    <textarea [(ngModel)]="product.description"></textarea>
+  </div>
+
+  <div class="actions">
+    <button class="btn-save" (click)="saveProduct()">Save</button>
+    <button class="btn-cancel" (click)="goBack()">Cancel</button>
+  </div>
 </div>
