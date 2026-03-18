@@ -1,0 +1,55 @@
+.supplier-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #004d40;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #80deea;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-save {
+  background: #00bcd4;
+  color: white;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-cancel {
+  background: #607d8b;
+  color: white;
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+}
